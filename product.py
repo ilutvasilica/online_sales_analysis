@@ -5,8 +5,8 @@ class Product :
         self.price = price 
         self.quantity = quantity
         
-    def __str__(self):
-        return f"{self.name},{self.price},{self.quantity}"
+    def display_info(self):
+        return f"Product name:{self.name},Price:{self.price:.2f},Quantity:{self.quantity}"
     
     def update_quantity(self,amount):
         self.quantity +=amount
