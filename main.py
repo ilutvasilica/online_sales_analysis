@@ -1,6 +1,8 @@
 
 from product import Product
 from product_manager import ProductManager
+from cart import Cart
+import random 
 
 manager = ProductManager()
 
@@ -24,3 +26,23 @@ manager.remove_product_by_name("Telefon")
 
 print("\nProdusele după ștergere:")
 manager.show_products()
+
+cart = Cart()
+
+products = manager.products
+
+for _ in range(3):
+    product = random.choice(products)
+    max_quantity = min(product.quantity, 3)
+    if max_quantity > 0:
+        quantity = random.randint(1, max_quantity)
+        cart.add_to_cart(product, quantity)
+
+print("\nThe cart contains:")
+cart.show_cart()
+
+print(f"\nTotal amount: {cart.calculate_total():.2f} RON")
+
+
+
+
