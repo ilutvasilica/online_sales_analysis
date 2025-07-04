@@ -1,0 +1,11 @@
+
+config.json
+
+
+__pycache__/
+
+
+*.png
+*.jpg
+*.jpeg
+*.gif
