@@ -6,9 +6,9 @@ import random
 
 manager = ProductManager()
 
-p1 = Product("Laptop",4500,5)
-p2 = Product("Telefon",2200,10)
-p3 = Product("Casti",250,15)
+p1 = Product("Laptop Gaming",5500,4)
+p2 = Product("Telefon Smart",2400,8)
+p3 = Product("Casti Wireless",300,12)
 
 manager.add_product(p1)
 manager.add_product(p2)
@@ -21,11 +21,6 @@ total = manager.total_inventory_value()
 
 print(f"\nValoarea totala a stocului: {total:.2f} $.")
 
-print("\nȘtergem produsul 'Telefon':")
-manager.remove_product_by_name("Telefon")
-
-print("\nProdusele după ștergere:")
-manager.show_products()
 
 cart = Cart()
 
