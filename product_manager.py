@@ -17,4 +17,12 @@ class ProductManager:
     def total_inventory_value(self):
         total_value= sum(product.price *product.quantity for product in self.products)
         return total_value
-                    
+    
+    def remove_product_by_name(self, name):
+        for product in self.products:
+         if product.name.lower() == name.lower():
+            self.products.remove(product)
+            print(f"The product '{name}' has benn deleted.")
+            return
+        print(f"The product '{name}' was not found.")
+                
